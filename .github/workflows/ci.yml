@@ -22,3 +22,8 @@ jobs:
       - name: Build native helper without microphone access
         if: runner.os == 'macOS'
         run: npm run setup:voice
+      - name: Build and verify Apple Silicon distribution
+        if: runner.os == 'macOS' && runner.arch == 'ARM64'
+        run: |
+          bash scripts/package-macos.sh
+          PARLIBOT_PACKAGE_TESTS=1 node --test tests/packaging.test.js
