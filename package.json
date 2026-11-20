@@ -1,0 +1,9 @@
+{
+  "name": "parlibot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Free local parliamentary debate practice room",
+  "scripts": {"start": "node server/index.js", "test": "node --test tests/*.test.js", "setup:voice": "bash scripts/setup-voice.sh"},
+  "engines": {"node": ">=22"}
+}

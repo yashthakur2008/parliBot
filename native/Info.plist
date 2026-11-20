@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleIdentifier</key><string>local.parlibot.voice</string>
+<key>CFBundleName</key><string>ParliBot Voice</string>
+<key>CFBundleExecutable</key><string>ParliBotVoice</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleVersion</key><string>1</string>
+<key>LSUIElement</key><true/>
+<key>NSMicrophoneUsageDescription</key><string>ParliBot transcribes debate practice locally only when you start the microphone. Audio is not saved.</string>
+<key>NSSpeechRecognitionUsageDescription</key><string>ParliBot requires on-device English speech recognition for free local debate transcription.</string>
+</dict></plist>
