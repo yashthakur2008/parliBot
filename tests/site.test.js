@@ -13,13 +13,13 @@ test('landing page links to the stable release asset, source and issues', () => 
   }
 });
 test('download explains platform, prerequisites, installation and signing limits', () => {
-  for (const claim of [/Apple Silicon/, /macOS/, /Node\.js 22\+/, /Ollama/, /unzip/i,
+  for (const claim of [/Apple Silicon/, /macOS 13\+/, /Node\.js 22\+/, /Ollama/, /unzip/i,
     /Install ParliBot\.command/, /~\/Applications\/ParliBot\.app/, /browser-based/i,
     /unsigned/i, /ad-hoc/i, /not notarized/i, /not a signed installer/i]) assert.match(text, claim);
 });
 test('privacy and practice claims disclose limitations without invented validation', () => {
   for (const claim of [/local-only by default/i, /vendor recognition/i, /explicit opt-in/i,
-    /send audio/i, /local helper/i, /typed/i, /no guarantee/i, /verify factual claims/i]) assert.match(text, claim);
+    /send audio/i, /bundled local helper/i, /supported on-device recognition/i, /explicit microphone and speech recognition permissions/i, /source builds require Xcode Command Line Tools/i, /typed/i, /no guarantee/i, /verify factual claims/i]) assert.match(text, claim);
   assert.doesNotMatch(text, /microphone.{0,20}(tested|verified)|guaranteed champion|champion-equivalent/i);
 });
 test('page has accessible landmarks, mobile viewport and local-only assets', () => {
