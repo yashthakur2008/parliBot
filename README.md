@@ -2,7 +2,15 @@
 
 A free local parliamentary debate practice room for two partners. Set a motion, prep together, debate an AI opposition, and review your speaking and case afterward.
 
-## Start
+## Download for Mac
+
+Visit **[the download page](https://yashthakur2008.github.io/parliBot/)** or [GitHub Releases](https://github.com/yashthakur2008/parliBot/releases/latest).
+
+The Apple Silicon ZIP includes `ParliBot.app`, a prebuilt local speech helper and `Install ParliBot.command`. Unzip it, run the installer, then open `~/Applications/ParliBot.app`. The launcher opens the browser-based practice room and starts local services when absent. Node.js22+ and Ollama must already be installed; neither runtimes nor model weights are bundled. Choose/install a local Ollama model separately. Native binaries target macOS13+, while current Node/Ollama versions may require a newer OS.
+
+This is an **ad-hoc signed, non-notarized** early release, not an Apple-signed installer. Review the release checksum and included instructions. No quarantine or security controls are modified. Microphone and Speech Recognition permissions remain your choice. The installer preserves existing installations as backups and may refuse replacement while the installed app's server is running.
+
+## Start from source
 
 Requires Node.js 22+ and [Ollama](https://ollama.com/) with at least one local chat model. No npm dependencies or API key.
 
@@ -18,7 +26,7 @@ Open **http://127.0.0.1:3210**. For example, install a local model with `ollama 
 
 ## Local voice setup
 
-On macOS, build the on-device speech helper once with `npm run setup:voice` (requires Apple command-line developer tools). Click **Test mic**, then approve microphone and speech-recognition access yourself. Use headphones. Actual transcription and audible playback still require a live user test. Typed practice remains available.
+The macOS download already includes the helper. For a source checkout on macOS, build the on-device speech helper once with `npm run setup:voice` (requires Apple command-line developer tools). Click **Test mic**, then approve microphone and speech-recognition access yourself. Use headphones. Actual transcription and audible playback still require a live user test. Typed practice remains available.
 
 ## Practice flow
 
